@@ -3,6 +3,8 @@ import headshot from "../assets/Headshot.png";
 import workProfilePhoto from "../assets/WorkProfile.jpg";
 import utilStyles from "../styles/utilStyles.module.css";
 import "../App.css";
+import { Projects } from "../staticData/Projects";
+import Photos from "../staticData/Photos";
 
 function Home() {
 	return (
@@ -11,85 +13,35 @@ function Home() {
 			<h2>Passionate and Driven Software Developer/Engineer</h2>
 
 			<div className="photo-container">
-				<a
-					href="https://youtu.be/Ar0J7Tdikmk?si=4Wjm49j2cHhQQEwt"
-					target="_blank"
-					rel="noopener"
-				>
-					<img
-						src={commencementPhoto}
-						className="coverImage"
-						alt="Brett Spangler speaking at his UWO graduation ceremony"
-					/>
-				</a>
-				<a
-					href="https://www.linkedin.com/in/brett-spangler/"
-					target="_blank"
-					rel="noopener"
-				>
-					<img
-						src={headshot}
-						className="coverImage"
-						alt="Brett Spangler's professional headshot'"
-					/>
-				</a>
-				<a
-					href="https://www.linkedin.com/in/brett-spangler/"
-					target="_blank"
-					rel="noopener"
-				>
-					<img
-						src={workProfilePhoto}
-						className="coverImage profile"
-						alt="Brett Spangler work profile photo"
-					/>
-				</a>
+				{Photos.map((photo) => (
+					<a href={photo.externalUrl} target="_blank" rel="noopener">
+						<img
+							src={photo.src}
+							className="coverImage"
+							alt={photo.alt}
+						></img>
+					</a>
+				))}
 			</div>
 
 			<div
 				className={utilStyles.leftAlign + " " + utilStyles.marginSpace}
 			>
-				<h3>Notable GitHub Projects</h3>
-
+				<h3>Notable Personal Projects</h3>
 				<ul>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/GolfLeagueTracker"
-							target="_blank"
-						>
-							Golf League Tracker
-						</a>
-					</li>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/FrontendTemplate"
-							target="_blank"
-						>
-							Frontend Template
-						</a>
-					</li>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/WorryApp"
-							target="_blank"
-						>
-							W.O.R.R.Y. App
-						</a>
-					</li>
-
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/Planner"
-							target="_blank"
-						>
-							SharePoint Framework (SPFx) web part with Planner
-							integration
-						</a>
-					</li>
+					{Projects.sort((p1, p2) => p1.sortOrder - p2.sortOrder).map(
+						(project) => (
+							<li key={project.sortOrder + project.displayName}>
+								<a
+									rel="noopener"
+									target="_blank"
+									href={project.url}
+								>
+									{project.displayName}
+								</a>
+							</li>
+						)
+					)}
 				</ul>
 			</div>
 
