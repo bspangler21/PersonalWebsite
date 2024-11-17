@@ -5,7 +5,7 @@ function App() {
 	return (
 		<>
 			<h1>Brett Spangler</h1>
-			<h2>Passionate and Drive Software Developer</h2>
+			<h2>Passionate and Driven Software Developer</h2>
 			<div>
 				<a
 					href="https://www.linkedin.com/in/brett-spangler/"
