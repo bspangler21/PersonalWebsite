@@ -9,9 +9,9 @@ function App() {
 		<>
 			<h1>Brett Spangler</h1>
 			<h2>Passionate and Driven Software Developer/Engineer</h2>
-			<div>
+			<div className="photo-container">
 				<a
-					href="https://www.linkedin.com/in/brett-spangler/"
+					href="https://youtu.be/Ar0J7Tdikmk?si=4Wjm49j2cHhQQEwt"
 					target="_blank"
 					rel="noopener"
 				>
@@ -100,6 +100,11 @@ function App() {
 				</a>
 				.
 			</p>
+			<div className={utilStyles.leftAlign}>
+				<a href="/PersonalWebsite/BrettSpanglerResume.pdf" download>
+					<button>Download Resume</button>
+				</a>
+			</div>
 		</>
 	);
 }

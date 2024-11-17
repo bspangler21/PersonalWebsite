@@ -16,15 +16,26 @@
   filter: drop-shadow(0 0 2em #68696aaa);
 }
 
+.photo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1rem;
+}
+
 .coverImage {
-  height: 450px;
+  height: 320px;
   padding: 1em;
   border-radius: 0%;
   /* border: 1px solid #000000; */
 }
 
 .coverImage.profile {
-  height: 450px;
+  height: 320px;
   /* padding: 1.5em; */
   /* border: 1px solid #000000; */
 }
