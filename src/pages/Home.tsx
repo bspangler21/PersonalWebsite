@@ -3,6 +3,7 @@ import headshot from "../assets/Headshot.png";
 import workProfilePhoto from "../assets/WorkProfile.jpg";
 import utilStyles from "../styles/utilStyles.module.css";
 import "../App.css";
+import { projects } from "../staticData/projects";
 
 function Home() {
 	return (
@@ -49,47 +50,21 @@ function Home() {
 			<div
 				className={utilStyles.leftAlign + " " + utilStyles.marginSpace}
 			>
-				<h3>Notable GitHub Projects</h3>
-
+				<h3>Notable Personal Projects</h3>
 				<ul>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/GolfLeagueTracker"
-							target="_blank"
-						>
-							Golf League Tracker
-						</a>
-					</li>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/FrontendTemplate"
-							target="_blank"
-						>
-							Frontend Template
-						</a>
-					</li>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/WorryApp"
-							target="_blank"
-						>
-							W.O.R.R.Y. App
-						</a>
-					</li>
-
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/Planner"
-							target="_blank"
-						>
-							SharePoint Framework (SPFx) web part with Planner
-							integration
-						</a>
-					</li>
+					{projects.sort((p1, p2) => p1.sortOrder - p2.sortOrder).map(
+						(project) => (
+							<li key={project.sortOrder + project.displayName}>
+								<a
+									rel="noopener"
+									target="_blank"
+									href={project.url}
+								>
+									{project.displayName}
+								</a>
+							</li>
+						)
+					)}
 				</ul>
 			</div>
 
