@@ -1,6 +1,3 @@
-import commencementPhoto from "../assets/Commencement.png";
-import headshot from "../assets/Headshot.png";
-import workProfilePhoto from "../assets/WorkProfile.jpg";
 import utilStyles from "../styles/utilStyles.module.css";
 import "../App.css";
 import { Projects } from "../staticData/Projects";
