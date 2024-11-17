@@ -89,6 +89,17 @@ function App() {
 					</li>
 				</ul>
 			</div>
+			<p className={utilStyles.leftAlign}>
+				Find the source code for this site{" "}
+				<a
+					href="https://github.com/bspangler21/PersonalWebsite"
+					rel="noopener"
+					target="_blank"
+				>
+					here
+				</a>
+				.
+			</p>
 		</>
 	);
 }
