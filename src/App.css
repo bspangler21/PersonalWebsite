@@ -16,6 +16,19 @@
   filter: drop-shadow(0 0 2em #68696aaa);
 }
 
+.coverImage {
+  height: 450px;
+  padding: 1em;
+  border-radius: 0%;
+  /* border: 1px solid #000000; */
+}
+
+.coverImage.profile {
+  height: 450px;
+  /* padding: 1.5em; */
+  /* border: 1px solid #000000; */
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
