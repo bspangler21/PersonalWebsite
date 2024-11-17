@@ -1,6 +1,6 @@
 import { Project } from "../types/Project";
 
-export const projects: Project[] = [
+export const Projects: Project[] = [
 	{
 		sortOrder: 1,
 		displayName: "Golf League Tracker",
