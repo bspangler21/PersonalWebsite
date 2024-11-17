@@ -86,7 +86,7 @@ function App() {
 							href="https://github.com/bspangler21/Planner"
 							target="_blank"
 						>
-							SharePoint Framework (SPFx) Web Part with Planner
+							SharePoint Framework (SPFx) web part with Planner
 							integration
 						</a>
 					</li>
