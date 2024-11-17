@@ -1,3 +1,7 @@
+import utilStyles from "../styles/utilStyles.module.css";
+import resume from "../styles/resume.module.css";
+import { Experiences } from "../staticData/Experiences";
+
 function Resume() {
 	return (
 		<>
@@ -29,6 +33,27 @@ function Resume() {
 						GitHub
 					</a>
 				</p>
+			</div>
+			<div className={utilStyles.leftAlign}>
+				<p className={resume.sectionHeader}>SKILLS</p>
+				<div>
+					<p className={resume.sectionHeader}>EXPERIENCE</p>
+					{Experiences.map((experience) => (
+						<>
+							<p className={resume.date}>{experience.date}</p>
+							<p className={resume.jobTitle}>
+								{experience.jobTitle}
+							</p>
+							<p className={utilStyles.noMargin}>
+								<span className={resume.company}>
+									{`${experience.company.toUpperCase()}`}
+									{", "}
+								</span>
+								<span>{experience.location}</span>
+							</p>
+						</>
+					))}
+				</div>
 			</div>
 			<div>
 				<p>
