@@ -9,6 +9,7 @@ function App() {
 		<>
 			<h1>Brett Spangler</h1>
 			<h2>Passionate and Driven Software Developer/Engineer</h2>
+
 			<div className="photo-container">
 				<a
 					href="https://youtu.be/Ar0J7Tdikmk?si=4Wjm49j2cHhQQEwt"
@@ -44,12 +45,22 @@ function App() {
 					/>
 				</a>
 			</div>
+
 			<div
 				className={utilStyles.leftAlign + " " + utilStyles.marginSpace}
 			>
 				<h3>Notable GitHub Projects</h3>
 
 				<ul>
+					<li>
+						<a
+							rel="noopener"
+							href="https://github.com/bspangler21/GolfLeagueTracker"
+							target="_blank"
+						>
+							Golf League Tracker
+						</a>
+					</li>
 					<li>
 						<a
 							rel="noopener"
@@ -68,15 +79,7 @@ function App() {
 							W.O.R.R.Y. App
 						</a>
 					</li>
-					<li>
-						<a
-							rel="noopener"
-							href="https://github.com/bspangler21/Golf-Tracker"
-							target="_blank"
-						>
-							Golf Tracker
-						</a>
-					</li>
+
 					<li>
 						<a
 							rel="noopener"
@@ -89,6 +92,13 @@ function App() {
 					</li>
 				</ul>
 			</div>
+
+			<div className={utilStyles.leftAlign}>
+				<a href="/PersonalWebsite/BrettSpanglerResume.pdf" download>
+					<button>Download Resume</button>
+				</a>
+			</div>
+			<br></br>
 			<p className={utilStyles.leftAlign}>
 				Find the source code for this site{" "}
 				<a
@@ -100,11 +110,6 @@ function App() {
 				</a>
 				.
 			</p>
-			<div className={utilStyles.leftAlign}>
-				<a href="/PersonalWebsite/BrettSpanglerResume.pdf" download>
-					<button>Download Resume</button>
-				</a>
-			</div>
 		</>
 	);
 }
