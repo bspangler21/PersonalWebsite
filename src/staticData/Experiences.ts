@@ -9,6 +9,7 @@ export const Experiences: Experience[] = [
 		responsibility: [
 			"Use Power Apps and various visualization, change data capture, and ETL tools to build enterprise-scale applications",
 			"Build responsive applications for desktop and mobile use",
+      "Establish data structures for applications using Dataverse, SharePoint lists, and Azure SQL Database"
 		],
 	},
 ];
