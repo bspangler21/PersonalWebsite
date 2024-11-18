@@ -9,7 +9,7 @@ const pages = [
 	},
 	{
 		name: "Resume",
-		link: `${baseUrl}/Resume`,
+		link: `${baseUrl}/#Resume`,
 	},
 ];
 

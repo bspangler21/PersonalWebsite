@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+	BrowserRouter,
+	Routes,
+	Route,
+	useLocation,
+	HashRouter,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Header from "./pageComponents/Header";
@@ -6,24 +12,21 @@ import Footer from "./pageComponents/Footer";
 
 function App() {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<ConditionalHeader />
 			<Routes>
-				<Route path="/PersonalWebsite" Component={Home}></Route>
-				<Route
-					path="/PersonalWebsite/Resume"
-					Component={Resume}
-				></Route>
+				<Route path="/" Component={Home}></Route>
+				<Route path="/Resume" Component={Resume}></Route>
 			</Routes>
 			<ConditionalFooter />
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
 function ConditionalHeader() {
-  const location = useLocation();
-  const showHeader = location.pathname !== "/PersonalWebsite/Resume/2";
-  return showHeader ? <Header /> : null;
+	const location = useLocation();
+	const showHeader = location.pathname !== "/PersonalWebsite/Resume/2";
+	return showHeader ? <Header /> : null;
 }
 
 function ConditionalFooter() {
