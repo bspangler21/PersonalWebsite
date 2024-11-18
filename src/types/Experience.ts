@@ -3,5 +3,5 @@ export type Experience = {
 	jobTitle: string;
 	company: string;
 	location: string;
-	responsibility: string[];
+	responsibilities: string[];
 };
