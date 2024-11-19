@@ -5,7 +5,7 @@ import { Certifications } from "../staticData/Certifications";
 
 function Resume() {
 	return (
-		<>
+		<div className={utilStyles.container}>
 			<div>
 				<h2>Brett Spangler</h2>
 				<p>
@@ -93,7 +93,7 @@ function Resume() {
 					</a>
 				</p>
 			</div>
-		</>
+		</div>
 	);
 }
 
